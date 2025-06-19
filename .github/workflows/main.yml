@@ -1,0 +1,18 @@
+name: Ping External IP
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to trigger the action
+
+jobs:
+  ping_ip:
+    runs-on: ubuntu-latest  # You can change this based on the OS you want to use
+    
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Ping external IP
+      run: |
+        ping -c 4 8.8.8.8  # Pinging Google's public DNS IP as an example
