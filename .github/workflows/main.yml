@@ -15,4 +15,4 @@ jobs:
 
     - name: Ping external IP
       run: |
-        ping -c 4 8.8.8.8  # Pinging Google's public DNS IP as an example
+        ping -c 4 1.1.1.1  # Pinging Google's public DNS IP as an example
